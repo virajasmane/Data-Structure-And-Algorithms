@@ -31,6 +31,7 @@ void isSetB(int n)
 //______________________________________________________________________________
 
 //Lookup table method (for 32 bits number).
+//Also better time complexity. 
 
 int table[256];
 
@@ -57,6 +58,8 @@ void isSetA(int n)
   res += table[n & 0xff];
 
   cout<<res;
+
+  // Time Complexity :- O( 1 )
 }
 
 int main()
