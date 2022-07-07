@@ -15,6 +15,9 @@ bool isPow2(int n)// Naive Solution
   }
   return true;
 }
+
+// Time Complexity :- O(log(n))
+
 //______________________________________________________________________________
 
 //Efficient solution (Brain Kerningham Algorithm)
@@ -25,6 +28,7 @@ bool isPow2B(int n)
     return (  (n!=0) && ( (n & (n-1) )  == 0) );
 }
 
+// Time Complexity :- O(1)
 
 int main()
 {
