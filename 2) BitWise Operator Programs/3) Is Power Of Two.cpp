@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//Check if the number is power of two.
+
 bool isPow2(int n)// Naive Solution
 {
   if(n==0)
