@@ -93,8 +93,7 @@ void findOdd2X(int arr[], int n)
   int XOR=0, res1=0, res2=0;
   for(int i=0; i<n; i++)
     XOR = XOR ^ arr[i];
-  int x = XOR & ~(XOR-1);// will return a no with only Rightmost set bit of XOR
-                        // set.
+  int x = XOR & ~(XOR-1);// will return a no with only Rightmost set bit of XOR set.
   for(int i=0; i<n; i++)
   {
     if((arr[i]&x) != 0)
