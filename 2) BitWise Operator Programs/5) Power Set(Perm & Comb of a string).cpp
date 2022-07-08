@@ -18,7 +18,7 @@ void powerSet(string s)
     }
     cout<<"\n";
   }
-  // Time Complxity :- Theta( 2^n * n )
+  // Time Complxity :- O( 2^n * n )
 }
 
 int main()
