@@ -34,6 +34,10 @@ int Count_Distinct_Elements(vector<int> vector)
 //______________________________________________________________________________
 
 // Effecient Solution
+
+// unordered_set overrides the same elements so copies of the int values are
+// not transferred to unordered_set.
+
 int E_Count_Distinct_Elements(vector<int> vector)
 {
   unordered_set<int> container;
@@ -49,6 +53,7 @@ int E_Count_Distinct_Elements(vector<int> vector)
 //______________________________________________________________________________
 
 // More Effecient Solution
+// Same logic as effecient solution just done here in a line.
 
 int E1_Count_Distinct_Elements(vector<int> vector)
 {
