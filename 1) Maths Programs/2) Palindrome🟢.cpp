@@ -13,7 +13,7 @@ bool ispal(int n)
   return (rev == n);
 }
 
-bool ispal(string str)
+bool ispal(string &str)
 {
   string rev = str;
   reverse(rev.begin(), rev.end());
@@ -25,7 +25,7 @@ bool ispal(string str)
 
 // Effecient Solution.
 
-bool ispalE(string n, int length)
+bool ispalE(string &n, int length)
 {
   int i=0;
   while(i < length-i-1)
@@ -48,4 +48,3 @@ int main()
   cout<<ispal(n);
 	return 0;
 }
-// Time Complexity :- Theta(d) , where d is no of digits in n
