@@ -13,24 +13,31 @@ bool ispal(int n)
   return (rev == n);
 }
 
-bool isPal(string str)
+bool ispal(string str)
 {
   string rev = str;
   reverse(rev.begin(), rev.end());
   return(str == rev);
 }
+// Time Complexity :- 0(n)
+// Auxillary Space :- 0(n)
+//______________________________________________________________________________
 
-// bool ispalE(string n, int length)
-// {
-//   int i=0;
-//   while(i < length-i-1)
-//   {
-//     if (n[i] != n[length-i-1]);
-//       return false;
-//     i++;
-//   }
-//   return true;
-// }
+// Effecient Solution.
+
+bool ispalE(string n, int length)
+{
+  int i=0;
+  while(i < length-i-1)
+  {
+    if (n[i] != n[length-i-1]);
+      return false;
+    i++;
+  }
+  return true;
+}
+// Time Complexity :- O(n)
+// Auxillary Space :- O(1)
 
 
 int main()
