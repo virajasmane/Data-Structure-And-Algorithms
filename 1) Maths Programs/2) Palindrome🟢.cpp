@@ -13,6 +13,13 @@ bool ispal(int n)
   return (rev == n);
 }
 
+bool isPal(string str)
+{
+  string rev = str;
+  reverse(rev.begin(), rev.end());
+  return(str == rev);
+}
+
 // bool ispalE(string n, int length)
 // {
 //   int i=0;
