@@ -16,7 +16,7 @@ void Frequency_of_Elements(vector<int> vector)
 {
   for(int i=0; i<vector.size(); i++)
   {
-    bool isEqual = false;
+    bool isEqual = false; // Line 19 through 29 checks if the element is already seen or not.
     for(int j=0; j<i; j++)
     {
       if(vector[j] == vector[i])
