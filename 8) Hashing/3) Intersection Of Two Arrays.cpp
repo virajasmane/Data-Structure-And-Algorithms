@@ -43,15 +43,56 @@ int Intersection_Of_Arrays(vector<int> vector1, vector<int> vector2)
 // Aux Space :- O(1)
 //______________________________________________________________________________
 
-//Effecient Solution
+// Effecient Solution 1
 
-int E_Intersection_Of_Arrays(vector<int> vector1, vector<int> vector2)
+// 1) Insert all the elements of a[] in s_a unordered_set.
+// 2) Insert all the elements of b[] in s_b  unordered_set.
+// 3) Now traverse through s_a and increment the count for elements
+//    that are present in the s_b also.
+
+
+int ES1_Intersection_Of_Arrays(vector<int> vector1, vector<int> vector2)
 {
   int result = 0;
+  unordered_set<int> s_a(vector1.begin(), vector1.end());
+  unordered_set<int> s_b(vector2.begin(), vector2.end());
 
+  for(int i=0; i<vector1.size(); i++)
+  {
+    if(s_b.find(s_a[i]) != s_b.end())
+      result++;
+  }
 
   return result;
 }
+// Time Complexity :- 0(m+n)
+// Aux Space :- O(m+n)
+//______________________________________________________________________________
+
+// Effecient Solution 2
+
+// 1) Insert all the elements of a[] in s_a unordered_set.
+// 2) Traverse through b[], search for every element b[i] in s_a, if present
+//    a) Increment result
+//    b) Remove b[i] from s_a (to avoid duplicates.)
+
+int ES2_Intersection_Of_Arrays(vector<int> vector1, vector<int> vector2)
+{
+  int result = 0;
+  unordered_set<int> s_a(vector1.begin(), vector1.end());
+  for(int i=0; i<vector2.size(); i++)
+  {
+    if(s_a.find(vector2[i]) != s_a.end())
+    {
+      result++;
+      s_a.erase(vector2[i]);
+    }
+  }
+  return result;
+}
+// Time Complexity :- 0(m+n)
+// Aux Space :- O(m)
+
 
 
 int main()
@@ -74,7 +115,7 @@ int main()
   for(auto &i: vector2)
     cin>>i;
 
-  cout<<E_Intersection_Of_Arrays(vector1, vector2);
+  cout<<ES2_Intersection_Of_Arrays(vector1, vector2);
 
 
   return 0;
