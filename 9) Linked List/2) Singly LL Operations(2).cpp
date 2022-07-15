@@ -85,7 +85,7 @@ Node *insert_at_position(Node *head, int position, int data)
 
   if(position == 1) // Corner case 1
   {
-    temp -> next = head;
+    temp -> next = head; // If the postion is passed as 1 then the head of the LL has to be changed, so temp becomes the new head.
     return temp;
   }
 
@@ -94,7 +94,7 @@ Node *insert_at_position(Node *head, int position, int data)
     current = current -> next;
 
   if(current == NULL) // Corner case 2
-    return head;
+    return head; // This is a case if position is given beyond the LL size+1, then we can't insert the element.
 
   temp -> next = current -> next; // 🟢
   current -> next = temp; // 🔴
