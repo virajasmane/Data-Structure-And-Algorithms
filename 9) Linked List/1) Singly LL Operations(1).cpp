@@ -27,6 +27,7 @@ void Printlist(Node *head)
 }
 // Time Complexity :- O(n), where n is no of nodes.
 // Auxiliary Space :- O(1)
+
 // Can also be traversed like this.
 // void Printlist(Node *head) // By changing the head here only the OG head in the int main() wont change because both are different. To check this print head twice in int main()
 // {
