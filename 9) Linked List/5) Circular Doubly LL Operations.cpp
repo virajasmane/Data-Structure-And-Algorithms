@@ -53,8 +53,8 @@ Node *insert_begin(Node *head, int x)
 
 Node *insert_end(Node *head, int x)
 {
-  // Full same as insert_begin function just at the last line where there is
-  // "return temp", put there "return head", and it will become insert_end function.
+  // Full same as insert_begin function just at the last line where there
+  // is "return temp", put there "return head", and it will become insert_end function.
 
   Node *temp = new Node(x);
 
