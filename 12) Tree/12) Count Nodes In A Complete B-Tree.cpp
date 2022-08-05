@@ -58,8 +58,8 @@ int CountNodes(Node *root)
   else
     return 1 + CountNodes(root->left) + CountNodes(root->right);
 }
+// T(n) < T(2n/3) + O(Logn), solving this we get
 // Time Complexity :- O(Logn * Logn)
-
 
 
 
