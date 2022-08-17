@@ -28,6 +28,7 @@ void BFS(vector<int> adj[], int v, int s, int dist[])
     }
   }
 }
+// Time Complexity :- O(V + E)
 
 void addEdge(vector<int> adj[], int u, int v)
 {
